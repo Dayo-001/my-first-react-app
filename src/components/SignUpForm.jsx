@@ -62,6 +62,58 @@ const SignUpForm = () => {
             className="border"
           />
         </div>
+        <div>
+          <div>
+            <label htmlFor="street">Street</label>
+          </div>
+          <input
+            type="text"
+            name="street"
+            value={signUpData.address.street}
+            onChange={(e) =>
+              dispatch({
+                type: SignUpActionTypes.changeStreet,
+                value: e.target.value,
+              })
+            }
+            className="border"
+          />
+        </div>
+        <div>
+          <div>
+            <label htmlFor="zipCode">Zip Code</label>
+          </div>
+          <input
+            type="text"
+            name="zipCode"
+            value={signUpData.address.zipCode}
+            onChange={(e) =>
+              dispatch({
+                type: SignUpActionTypes.changeZipCode,
+                value: e.target.value,
+              })
+            }
+            className="border"
+          />
+        </div>
+        <div>
+          <div>
+            <label htmlFor="houseNumber">House Number</label>
+          </div>
+         
+          <input
+            type="text"
+            name="houseNumber"
+            value={signUpData.address.houseNumber}
+            onChange={(e) =>
+              dispatch({
+                type: SignUpActionTypes.changeHouseNumber,
+                value: e.target.value,
+              })
+            }
+            className="border"
+          />
+        </div>
         <div className="flex gap-2 items-center justify-center mt-10">
           <button
             onClick={(e) => {

@@ -2,6 +2,9 @@ export const SignUpActionTypes = {
   changeName: "setName",
   changeEmail: "setEmail",
   changePassword: "setPassword",
+  changeStreet: "setStreet",
+  changeZipZode: "setZipCode",
+  changeHouseNumber: "setHouseNumber",
   reset: "reset",
 };
 
@@ -35,6 +38,33 @@ const signUpReducer = (state, action) => {
       password: action.value,
     };
   }
+  if (action.type === SignUpActionTypes.changeStreet) {
+    return {
+      ...state,
+      address: {
+        ...state.address,
+        street: action.value
+      }
+    };
+  }
+    if (action.type === SignUpActionTypes.changeZipCode) {
+      return {
+        ...state,
+      address: {
+        ...state.address,
+        zipCode: action.value
+      }
+      };
+    }
+    if (action.type === SignUpActionTypes.changeHouseNumber) {
+      return {
+        ...state,
+      address: {
+        ...state.address,
+        houseNumber: action.value
+      }
+      };
+    }
   if (action.type === SignUpActionTypes.reset) {
     return initialState;
   }
