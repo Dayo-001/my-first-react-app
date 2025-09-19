@@ -68,6 +68,33 @@ const signUpReducer = (state, action) => {
   if (action.type === SignUpActionTypes.reset) {
     return initialState;
   }
+
+  if (action.type === SignUpActionTypes.changeAddressStreet) {
+    return {
+      ...state,
+      address:{
+        ...state.address,
+        street: action.value},
+    };
+  }
+
+  if (action.type === SignUpActionTypes.changeAddressHouseNumber) {
+    return {
+      ...state,
+      address:{
+        ...state.address,
+        houseNumber: action.value,}
+    };
+  }
+
+  if (action.type === SignUpActionTypes.changeAddressZipcode) {
+    return {
+      ...state,
+      address:{
+        ...state.address,
+      zipCode: action.value,}
+    };
+  }
 };
 
 export default signUpReducer;
