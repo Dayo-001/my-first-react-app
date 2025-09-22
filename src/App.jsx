@@ -5,8 +5,10 @@ import SignUpForm from "./components/SignUpForm";
 function App() {
   return (
     <>
-      {/* <Counter /> */}
-      <SignUpForm />
+      <>
+        <SignUpForm />
+        {/* <Counter /> */}
+      </>
     </>
   );
 }
